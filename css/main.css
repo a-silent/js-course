@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 25px;
+	color: darkblue;
+	border: 1px solid blue;
+	padding: 7px 25px;
+	border-radius: 15px;
+	margin: 0 0 10px 0;
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
+
+}
+
+a:hover {
+	background: rgba(0, 255, 230, 0.3);
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin: 0 auto;
+	padding-top: 10px;
+	text-align: center;
+}
