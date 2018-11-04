@@ -63,18 +63,10 @@ var comments = {
 
 function getCurrentPostComments ( postId ) {
         var res = []
-        users.searchName = function ( id ) {
-                for (var y in this) {
-	                if ( Number( y ) === id ) {
-		                var userName = this[ y ] [ "name" ]
-	                }
-                }
-                return userName
-        }
     
         for ( var x in comments ) {
                 if ( comments [ x ] [ "postId" ] === postId ) {
-                        res.push ( { "author" : users.searchName( comments [ x ] [ "author" ] ), "text" : comments[ x ] [ "text" ] } )
+                        res.push ( { "author" : users [ comments [ x ] [ "author" ] ] ["name"], "text" : comments[ x ] [ "text" ] } )
                 }
         }
         return res
