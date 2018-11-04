@@ -68,7 +68,8 @@ function getCurrentPostComments ( postId ) {
 	                if ( Number( y ) === id ) {
 		                var userName = this[ y ] [ "name" ]
 	                }
-                }       return userName
+                }
+                return userName
         }
     
         for ( var x in comments ) {
