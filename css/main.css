@@ -6,31 +6,80 @@
 	box-sizing: border-box;
 }
 
-a {
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 25px;
-	color: darkblue;
-	border: 1px solid blue;
-	padding: 7px 25px;
-	border-radius: 15px;
-	margin: 0 0 10px 0;
-	-webkit-transition: background 0.3s;
-	-moz-transition: background 0.3s;
-	-o-transition: background 0.3s;
-	transition: background 0.3s;
-
+html {
+	font-family: 'Russo One', sans-serif;
+	font-size: 18px;
 }
 
-a:hover {
-	background: rgba(0, 255, 230, 0.3);
+body {
+	background-image: url(../img/bg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	padding: 15px;
+}
+
+.style {
+	padding: 15px 20px;
+	background-color: rgba(255,255,255,0.7);
+	border: 2px solid #fff;
+	border-radius: 20px;
 }
 
 .wrapper {
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+.header {
 	display: flex;
 	flex-direction: column;
-	width: 40%;
-	margin: 0 auto;
-	padding-top: 10px;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.header h1 {
+	font-size: 2rem;
+	color: #283743;
+	margin: 0;
+	letter-spacing: 0.2rem;
 	text-align: center;
+}
+
+.header h2 {
+	font-size: 1.7rem;
+	letter-spacing: 0.15rem;
+	color: #018CDB;
+	margin: 0;
+}
+
+/*END HEADER*/
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.main a {
+	font-size: 1.3rem;
+	letter-spacing: 0.15rem;
+	color: #283743;
+	text-decoration: none;
+	margin-bottom: 5px;
+	text-align: center;
+	transition: all 0.5s;
+}
+
+.main a:hover {
+	color: #018CDB;
+	border: 2px solid #018CDB;
+	letter-spacing: 0.2rem;
+}
+
+@media (min-width: 480px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
